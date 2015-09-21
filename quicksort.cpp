@@ -18,9 +18,9 @@ void quicksort(int data[], int n){
     int n2;		//elements after pivot index
     
     //initialize the two indicies
+    int pivot = data[0];
     int leftindex = 1;
     int rightindex = n-1;
-    int pivot = data[0];
 
     while(leftindex <= rightindex){
       while(data[leftindex] <= pivot && leftindex < n)
@@ -32,13 +32,14 @@ void quicksort(int data[], int n){
       }
     }
     pivot_index = rightindex;
-    swap(data,0,pivot_index);
+    data[0] = data[pivot_index];
+    data[pivot_index] = pivot;
 
-    n1 = pivot_index;
+    n1 = pivot_index + 1;
     n2 = n - n1;
 
     //recursive calls
-    quicksort(data,n1);
+    quicksort(data, n1);
     quicksort(data+pivot_index+1,n2);
   }
 }
