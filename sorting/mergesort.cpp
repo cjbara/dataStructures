@@ -43,8 +43,8 @@ void mergesort(int data[], int n){
     int n2 = n - n1;
 
     //recursive calls
-    mergesort(&data[0],n1);
-    mergesort(&(data+n1)[0],n2);
+    mergesort(data,n1);
+    mergesort(data+n1,n2);
     merge(data, n1, n2);
   }
 }
