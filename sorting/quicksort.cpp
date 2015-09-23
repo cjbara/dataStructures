@@ -18,6 +18,9 @@ void quicksort(int data[], int n){
     int n2;		//elements after pivot index
     
     //initialize the two indicies
+    //to find a pivot, choose a random value, and then swap that witht he first element to make the previous algorithm work
+    int random = rand()%n;
+    swap(data, 0, random);
     int pivot = data[0];
     int leftindex = 1;
     int rightindex = n-1;
