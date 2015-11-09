@@ -16,4 +16,4 @@ bucketsort: bucketsort.cpp
 
 .PHONY: clean
 clean:
-	rm mergesort quicksort insertionsort
+	rm mergesort quicksort insertionsort bucketsort
